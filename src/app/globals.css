@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Cấu hình Theme trực tiếp tại đây thay vì tailwind.config.ts 
+  Đây là bộ màu và font cho phong cách Nữ tính/Xiaohongshu
+*/
+
+@theme {
+  /* Màu sắc */
+  --color-primary: #fb7185;
+  --color-secondary: #fecdd3;
+  --color-background: #fdfdfd;
+  --color-graytag: #918f8f;
+
+  --color-dark: #292526;
+  --color-darklight: #343031;
+
+  /* Font family */
+  --font-family-sans:
+    var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom Border Radius */
+  --radius-sm: 9px;
+
+  /* Custom Spacing (cho padding/margin) */
+  --spacing-xs: 7px;
+
+  /* Custom Font Sizes */
+  --font-size-xs: 10px;
+  --font-size-xs--line-height: 1.4;
+}
+
+/* Reset mặc định để app trông sạch sẽ hơn */
+body {
+  color: var(--color-text-main);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-background);
+}
+
+/* Ẩn thanh cuộn nhưng vẫn cuộn được (cho trải nghiệm giống App) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom utility classes cho các giá trị đặc biệt */
+@utility rounded-sm {
+  border-radius: 9px;
+}
+
+@utility py-xs {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+@utility px-xs {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+@utility text-xs {
+  font-size: 9px;
+  line-height: 1.4;
+}
